@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E831B7F022FEF3B700383D26 /* PostDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7EF22FEF3B700383D26 /* PostDetailsPresenterTests.swift */; };
+		E831B7F222FEF3C800383D26 /* MockPostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7F122FEF3C800383D26 /* MockPostDetailsView.swift */; };
 		E8646DB822FEB3B50091C3A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646DB722FEB3B50091C3A7 /* AppDelegate.swift */; };
 		E8646DBA22FEB3B50091C3A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646DB922FEB3B50091C3A7 /* MainViewController.swift */; };
 		E8646DBF22FEB3B60091C3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8646DBE22FEB3B60091C3A7 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E831B7EF22FEF3B700383D26 /* PostDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		E831B7F122FEF3C800383D26 /* MockPostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDetailsView.swift; sourceTree = "<group>"; };
 		E8646DB422FEB3B50091C3A7 /* TattoodooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattoodooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8646DB722FEB3B50091C3A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8646DB922FEB3B50091C3A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				E8646E1622FECFBC0091C3A7 /* Mock */,
 				E8646DCE22FEB3B60091C3A7 /* Info.plist */,
 				E8646E1422FECF550091C3A7 /* MainPresenterTests.swift */,
+				E831B7EF22FEF3B700383D26 /* PostDetailsPresenterTests.swift */,
 			);
 			path = TattoodooAppTests;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 			children = (
 				E8646E1722FECFCC0091C3A7 /* MockTattoosFetcher.swift */,
 				E8646E1922FED0FD0091C3A7 /* MockMainView.swift */,
+				E831B7F122FEF3C800383D26 /* MockPostDetailsView.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -458,6 +464,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8646E1822FECFCC0091C3A7 /* MockTattoosFetcher.swift in Sources */,
+				E831B7F022FEF3B700383D26 /* PostDetailsPresenterTests.swift in Sources */,
+				E831B7F222FEF3C800383D26 /* MockPostDetailsView.swift in Sources */,
 				E8646E1522FECF550091C3A7 /* MainPresenterTests.swift in Sources */,
 				E8646E1A22FED0FD0091C3A7 /* MockMainView.swift in Sources */,
 			);
