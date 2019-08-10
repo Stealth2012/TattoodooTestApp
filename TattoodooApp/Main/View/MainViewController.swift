@@ -78,10 +78,15 @@ class MainViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .black
+        
         postsTableView.tableFooterView = UIView()
         postsTableView.register(PostCell.self, forCellReuseIdentifier: PostCell.reuseIdentifier)
         postsTableView.dataSource = self
         postsTableView.delegate = self
+        postsTableView.separatorStyle = .none
+        postsTableView.delaysContentTouches = false
     }
 }
 

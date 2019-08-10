@@ -1,5 +1,5 @@
 //
-//  Tattoo.swift
+//  Artist.swift
 //  TattoodooApp
 //
 //  Created by Artem Shuba on 10.08.2019.
@@ -8,12 +8,10 @@
 
 import Foundation
 
-struct Post : Decodable {
+struct Artist : Decodable {
     let id: Int
     
-    let image: PostImage?
+    let name: String
     
-    let artist: Artist
-    
-    let description: String?
+    let imageUrl: String?
 }
