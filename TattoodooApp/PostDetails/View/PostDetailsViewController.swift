@@ -26,11 +26,12 @@ class PostDetailsViewController : UIViewController {
     private let presenter: PostDetailsPresenterProtocol
     
     private lazy var scrollView = UIScrollView()
-    private lazy var tattooImageView = UIImageView()
+    private(set) lazy var tattooImageView = UIImageView()
     private lazy var artistImageView = UIImageView()
     private lazy var artistStackView = UIStackView()
     private lazy var artistLabel = UILabel()
     private lazy var descriptionLabel = UILabel()
+    private lazy var closeButton = UIButton()
     
     // MARK: - Init
     
@@ -59,6 +60,7 @@ class PostDetailsViewController : UIViewController {
     
     private func setupLayout() {
         view.addSubview(scrollView)
+        view.addSubview(closeButton)
         scrollView.addSubview(tattooImageView)
         scrollView.addSubview(artistImageView)
         scrollView.addSubview(artistStackView)
@@ -98,6 +100,23 @@ class PostDetailsViewController : UIViewController {
             artistStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             artistStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
         ])
+        
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            closeButton.widthAnchor.constraint(equalToConstant: 60),
+            closeButton.heightAnchor.constraint(equalToConstant: 60),
+        ])
+        
+        if #available(iOS 11, *) {
+            NSLayoutConstraint.activate([
+                closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                closeButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            ])
+        }
     }
     
     private func setupViews() {
@@ -116,6 +135,17 @@ class PostDetailsViewController : UIViewController {
         
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = .systemFont(ofSize: 16)
+        
+        tattooImageView.contentMode = .scaleAspectFill
+        tattooImageView.clipsToBounds = true
+        
+        closeButton.setImage(UIImage(named: "close_icon"), for: .normal)
+        closeButton.addTarget(self, action: #selector(closeButtonClick), for: .touchUpInside)
+    }
+    
+    @objc
+    private func closeButtonClick(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

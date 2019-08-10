@@ -10,6 +10,7 @@
 		E831B7F022FEF3B700383D26 /* PostDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7EF22FEF3B700383D26 /* PostDetailsPresenterTests.swift */; };
 		E831B7F222FEF3C800383D26 /* MockPostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7F122FEF3C800383D26 /* MockPostDetailsView.swift */; };
 		E831B7F422FEFD5F00383D26 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7F322FEFD5F00383D26 /* Artist.swift */; };
+		E831B7F722FF0FC800383D26 /* PostDetailsTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831B7F622FF0FC800383D26 /* PostDetailsTransition.swift */; };
 		E8646DB822FEB3B50091C3A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646DB722FEB3B50091C3A7 /* AppDelegate.swift */; };
 		E8646DBA22FEB3B50091C3A7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646DB922FEB3B50091C3A7 /* MainViewController.swift */; };
 		E8646DBF22FEB3B60091C3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8646DBE22FEB3B60091C3A7 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		E831B7EF22FEF3B700383D26 /* PostDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		E831B7F122FEF3C800383D26 /* MockPostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDetailsView.swift; sourceTree = "<group>"; };
 		E831B7F322FEFD5F00383D26 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		E831B7F622FF0FC800383D26 /* PostDetailsTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsTransition.swift; sourceTree = "<group>"; };
 		E8646DB422FEB3B50091C3A7 /* TattoodooApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TattoodooApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8646DB722FEB3B50091C3A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8646DB922FEB3B50091C3A7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E831B7F522FF0FA700383D26 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				E831B7F622FF0FC800383D26 /* PostDetailsTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		E8646DAB22FEB3B50091C3A7 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		E8646DE522FEB9310091C3A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E831B7F522FF0FA700383D26 /* Transitions */,
 				E8646DF422FEC0970091C3A7 /* Cells */,
 				E8646DB922FEB3B50091C3A7 /* MainViewController.swift */,
 			);
@@ -460,6 +471,7 @@
 				E8646DDA22FEB49C0091C3A7 /* HttpRequest.swift in Sources */,
 				E8646DE322FEB86B0091C3A7 /* PostsResponse.swift in Sources */,
 				E8646E1022FEC67D0091C3A7 /* MainRouter.swift in Sources */,
+				E831B7F722FF0FC800383D26 /* PostDetailsTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

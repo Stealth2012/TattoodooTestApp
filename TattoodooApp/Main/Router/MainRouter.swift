@@ -27,6 +27,7 @@ class MainRouter {
     /// - Parameter image: Image view model.
     func routeToDetails(of post: PostViewModel) {
         let detailsViewController = PostDetailsViewBuilder.build(with: post)
-        sourceViewController?.navigationController?.pushViewController(detailsViewController, animated: true)
+        detailsViewController.transitioningDelegate = sourceViewController
+        sourceViewController?.present(detailsViewController, animated: true)
     }
 }

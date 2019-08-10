@@ -17,7 +17,7 @@ class PostCell : UITableViewCell {
     // MARK: - Properties: private
     
     private lazy var shadowView = UIView()
-    private lazy var tattooImageView = UIImageView()
+    private (set) lazy var tattooImageView = UIImageView()
     private lazy var artistImageView = UIImageView()
     private lazy var artistLabel = UILabel()
     

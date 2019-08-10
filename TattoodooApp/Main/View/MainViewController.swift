@@ -27,6 +27,8 @@ class MainViewController: UIViewController {
     private lazy var activityIndicator = UIActivityIndicatorView(style: .gray)
     private lazy var postsTableView = UITableView()
     
+    private var selectedCell: PostCell?
+    
     // MARK: - Init
     
     init(presenter: MainPresenterProtocol) {
@@ -124,6 +126,24 @@ extension MainViewController : UITableViewDataSource {
 
 extension MainViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCell = tableView.cellForRow(at: indexPath) as? PostCell
+        
         presenter.selectPost(at: indexPath)
+    }
+}
+
+// MARK: - MainViewController + UIViewControllerTransitioningDelegate
+
+extension MainViewController : UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let cell = selectedCell else { return nil }
+        
+        return PostDetailsPresentAnimationTransitioningIn(sourceView: cell)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let cell = selectedCell else { return nil }
+
+        return PostDetailsPresentAnimationTransitioningOut(targetView: cell)
     }
 }
