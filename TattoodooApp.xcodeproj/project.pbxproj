@@ -32,6 +32,9 @@
 		E8646E0D22FEC6480091C3A7 /* PostDetailsViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E0C22FEC6480091C3A7 /* PostDetailsViewBuilder.swift */; };
 		E8646E1022FEC67D0091C3A7 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E0F22FEC67D0091C3A7 /* MainRouter.swift */; };
 		E8646E1322FECA630091C3A7 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E1222FECA630091C3A7 /* PostViewModel.swift */; };
+		E8646E1522FECF550091C3A7 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E1422FECF550091C3A7 /* MainPresenterTests.swift */; };
+		E8646E1822FECFCC0091C3A7 /* MockTattoosFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E1722FECFCC0091C3A7 /* MockTattoosFetcher.swift */; };
+		E8646E1A22FED0FD0091C3A7 /* MockMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8646E1922FED0FD0091C3A7 /* MockMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		E8646E0C22FEC6480091C3A7 /* PostDetailsViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewBuilder.swift; sourceTree = "<group>"; };
 		E8646E0F22FEC67D0091C3A7 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		E8646E1222FECA630091C3A7 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		E8646E1422FECF550091C3A7 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		E8646E1722FECFCC0091C3A7 /* MockTattoosFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTattoosFetcher.swift; sourceTree = "<group>"; };
+		E8646E1922FED0FD0091C3A7 /* MockMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +153,9 @@
 		E8646DCB22FEB3B60091C3A7 /* TattoodooAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E8646E1622FECFBC0091C3A7 /* Mock */,
 				E8646DCE22FEB3B60091C3A7 /* Info.plist */,
+				E8646E1422FECF550091C3A7 /* MainPresenterTests.swift */,
 			);
 			path = TattoodooAppTests;
 			sourceTree = "<group>";
@@ -310,6 +318,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E8646E1622FECFBC0091C3A7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				E8646E1722FECFCC0091C3A7 /* MockTattoosFetcher.swift */,
+				E8646E1922FED0FD0091C3A7 /* MockMainView.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +381,7 @@
 					};
 					E8646DC722FEB3B60091C3A7 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = E8646DB322FEB3B50091C3A7;
 					};
 				};
@@ -439,6 +457,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8646E1822FECFCC0091C3A7 /* MockTattoosFetcher.swift in Sources */,
+				E8646E1522FECF550091C3A7 /* MainPresenterTests.swift in Sources */,
+				E8646E1A22FED0FD0091C3A7 /* MockMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +652,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FUBVVN7HH;
 				INFOPLIST_FILE = TattoodooAppTests/Info.plist;
@@ -641,6 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashuba.TattoodooAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TattoodooApp.app/TattoodooApp";
@@ -652,6 +675,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FUBVVN7HH;
 				INFOPLIST_FILE = TattoodooAppTests/Info.plist;
