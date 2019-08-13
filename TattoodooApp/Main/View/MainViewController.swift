@@ -77,11 +77,15 @@ class MainViewController: UIViewController {
     
     private func setupViews() {
         title = "Trending"
+        extendedLayoutIncludesOpaqueBars = true
         
         view.backgroundColor = .white
         
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = .black
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
         
         postsTableView.tableFooterView = UIView()
         postsTableView.register(PostCell.self, forCellReuseIdentifier: PostCell.reuseIdentifier)
